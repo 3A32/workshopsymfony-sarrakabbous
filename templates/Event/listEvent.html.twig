@@ -1,0 +1,10 @@
+<a href="{{path('app_addEvent')}}">Add Event</a>
+<h4>List Events</h4>
+{% for i in tabEvents %}
+id:{{ i.id }}
+title:{{ i.title }}
+dateDebut:{{ i.dateDebut }}
+dateFin:{{ i.dateFin }}
+Categorie:{{ i.Categorie}}
+
+{% endfor %}

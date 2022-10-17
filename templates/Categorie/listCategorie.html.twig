@@ -1,0 +1,7 @@
+<a href="{{path('app_addCategorie')}}">Add Categorie</a>
+<h4>List Categories</h4>
+{% for i in tabCategories %}
+id:{{ i.id }}
+name:{{ i.name }}
+
+{% endfor %}
