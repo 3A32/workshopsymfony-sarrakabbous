@@ -13,8 +13,38 @@ class Student
     #[ORM\Column]
     private ?int $id = null;
 
+    #[ORM\ManyToOne(inversedBy: 'students')]
+    private ?Classroom $classroom = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $username = null;
+
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getClassroom(): ?Classroom
+    {
+        return $this->classroom;
+    }
+
+    public function setClassroom(?Classroom $classroom): self
+    {
+        $this->classroom = $classroom;
+
+        return $this;
+    }
+
+    public function getUsername(): ?string
+    {
+        return $this->username;
+    }
+
+    public function setUsername(string $username): self
+    {
+        $this->username = $username;
+
+        return $this;
     }
 }
