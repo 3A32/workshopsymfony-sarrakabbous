@@ -40,13 +40,3 @@
 
 Nb_Formation: {{ tabFormation|length }}
 
-{% set tab=[] %}
-
-{% for v in tab %}
-  {% for i in tabFormation %}
-     {% tab[v]=i.nb_participants %}
-   {% endfor %} 
-{% endfor %}
-
-
-valeur max : max(tab)
